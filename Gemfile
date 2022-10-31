@@ -37,6 +37,8 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 gem "rest-client"
 
+gem "httparty"
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -56,6 +58,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'byebug'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'rails-controller-testing'
 end
 
 group :development do
