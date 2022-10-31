@@ -29,14 +29,15 @@ before_action :fetch_bitcoin_price, only: [:show, :checkout, :buy, :sell]
     end
 
     User.transaction do
-      @user = User.find.first
-      @user.update(balance: @user.balance + @price_in_usd)
+      @user = User.first
+      @user.update(balance: @user.balance)
       @pokemon.update(last_sell_price: @price_in_usd)
 
       Transaction.new(
         action: operation[:action],
         pokemon_id: @pokemon.id,
-        amount: @price_in_usd
+        amount: @price_in_usd,
+        user_id: @user.id
       ).save!
     end
   end
