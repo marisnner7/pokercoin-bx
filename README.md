@@ -16,18 +16,18 @@ Pokecoin: trade pokémon as NFTs
 | [GET]    | /user/transactions      | Shows all user transactions             |
 
 
-###How to run
-#git clone the project
+### How to run
+# git clone the project
 ```rake pokemons:collect```
-##Fill the database with pokemons doing an API call: 
+## Fill the database with pokemons doing an API call: 
 ```rake pokemons:collect```
 ## Start the server
 ```rails s```
-##Run the tests
+## Run the tests
 ```rspec spec```
 
-###It was developed using rails 7 and ruby 3.1.2
+### It was developed using rails 7 and ruby 3.1.2
 
 
-###Todos: dockerize and fix bugs. 
+### Todos: dockerize and fix bugs. 
 
