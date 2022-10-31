@@ -12,9 +12,7 @@ Pokecoin: trade pokémon as NFTs
 | [GET]    | /pokemon/:id/checkout | Proceed to buy a Pokemon                |
 | [POST]   | /pokemon/:id/buy      | Validates and transact a valid purchase |
 | [POST]   | /pokemon/:id/sell     | Validates and transact a valid sale     |
-| [GET]    | /user                   | Displays the logged in user account     |
-| [GET]    | /user/add               | Shows a screen to add money to wallet   |
-| [PATCH]  | /user/add               | Adds money to the wallet                |
+| [GET]    | /user                   | Displays user dashboard     |              |
 | [GET]    | /user/transactions      | Shows all user transactions             |
 
 
@@ -31,5 +29,5 @@ Pokecoin: trade pokémon as NFTs
 ###It was developed using rails 7 and ruby 3.1.2
 
 
-
+###Todos: dockerize and fix bugs. 
 
