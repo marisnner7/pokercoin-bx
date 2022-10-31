@@ -1,0 +1,31 @@
+<h1>Hello, <%= @user.name %></h1>
+<p>
+    Your current balance is <b>USD <%= @user.balance %></b>.
+    <%= link_to "Add +", user_add_path %>
+</p>
+
+
+<h2>Personal data</h2>
+<hr>
+<h4><%= @user.name %></h4>
+<p><%= @user.email %></p>
+<hr>
+<p><%= @user.pokemons.count %> pokémon and <%= @user.transactions.count %> transactions</p>
+<%= link_to "View transactions", user_transactions_path %>
+
+<h2>Pokédex</h2>
+<hr>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Base XP</th>
+        <th>BuyBtn</th>
+    </tr>
+
+    <% @user.pokemons.each do |pokemon| %>
+        <tr>
+            <td><%= pokemon.name %></td>
+            <td><%= pokemon.base_experience %></td>
+            <td><%= link_to "Sell for #{pokemon.price}", pokemon_show_path(pokemon.id)%></td>
+        </tr>
+    <% end %>
