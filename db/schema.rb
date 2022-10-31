@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_30_045036) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_30_053302) do
   create_table "pokemons", force: :cascade do |t|
     t.string "name"
     t.decimal "price", precision: 15, scale: 8
@@ -18,6 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_30_045036) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "url"
     t.index ["user_id"], name: "index_pokemons_on_user_id"
   end
 
