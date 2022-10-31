@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get '/user', to: 'user#index', as: 'user_index'
   get '/user/add', to: 'user#add', as: 'user_add'
   get '/user/transactions', to: 'user#transactions', as: 'user_transactions'
+  patch '/user/add', to: 'user#store_money', as: 'user_store_money'
+
 
 
 
