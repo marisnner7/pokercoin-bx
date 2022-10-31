@@ -1,0 +1,11 @@
+<h1>Pokemon#show</h1>
+
+<h3><%= @pokemon.name %></h3>
+<p>Base Experience: <%= @pokemon.base_experience %></p>
+
+
+
+<p><%= link_to "Sell for USD #{@price_in_usd}", pokemon_checkout_path(@pokemon.id)%></p>
+
+<p><%= link_to "Buy for BTC #{@pokemon.price}", pokemon_checkout_path(@pokemon.id)%></p>
+

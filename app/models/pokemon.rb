@@ -5,6 +5,5 @@ class Pokemon < ApplicationRecord
   validates :price, presence: true
   validates :base_experience, presence: true
 
-
 end
 
